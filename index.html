@@ -1,0 +1,301 @@
+<!-- index.html for NeuroSentinal X Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroSentinal X | Obscura Ops</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      scroll-behavior: smooth;
+      background-color: #0f1116;
+      color: #f0f2f6;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .scrollable-table {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #444;
+      border-radius: 10px;
+      margin: auto;
+      width: 80%;
+    }
+    .scrollable-table table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #22252b;
+    }
+    .scrollable-table tbody tr:hover {
+      background-color: #2a2f38;
+      transition: 0.3s ease;
+    }
+    table th, table td {
+      color: #f0f2f6;
+      padding: 0.75em;
+    }
+    #color-info {
+      margin-top: 1em;
+      text-align: center;
+    }
+    .color-box {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      border-radius: 3px;
+    }
+      /* Hero Section */
+    .hero {
+      background: linear-gradient(145deg, #12F7D6, #0f1116);
+      color: #000;
+      padding: 4em 1em;
+      box-shadow: 0 4px 20px rgba(18, 247, 214, 0.2);
+    }
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 0.2em;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin: 0.2em 0;
+      color: #ffffff;
+    }
+
+    /* Contact & Team */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75em;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1em;
+      background: #1c1f26;
+      color: #f0f2f6;
+      font-size: 1em;
+    }
+    .contact-form button {
+      background-color: #12F7D6;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 0.75em 2em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #0be0c7;
+    }
+
+    /* Team List */
+    .team-side ul li {
+      background: #282c34;
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      margin-bottom: 0.5em;
+      transition: background 0.3s;
+    }
+    .team-side ul li:hover {
+      background: #3a3f4c;
+    }
+
+    /* Add animated star background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://assets.codepen.io/1462889/stars.svg') repeat;
+      animation: moveStars 60s linear infinite;
+      z-index: -3;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    @keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
+    /* Floating Particles Background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      top: 0;
+      left: 0;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header class="hero animate__animated animate__fadeInDown">
+    <div class="container">
+      <h1>🛡️ NeuroSentinal X</h1>
+      <p>Global Digital Immune System for Fraud Prevention</p>
+      <p class="team">By Team Obscura Ops</p>
+    </div>
+  </header>
+
+  <section id="about" class="animate__animated animate__fadeInLeft">
+    <div class="container">
+      <h2>What is NeuroSentinal X?</h2>
+      <p>
+        NeuroSentinal X is a collaborative, predictive, and privacy-preserving fraud detection system that mimics the biological immune system. It uses AI models like Isolation Forests and LSTM to detect behavioral anomalies, shares anonymized fraud hashes via blockchain, and coordinates swarm intelligence across organizations.
+      </p>
+    </div>
+  </section>
+
+  
+
+  <section id="live-table" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2>🧠 Real-Time Fraud Events</h2>
+      <div class="scrollable-table">
+        <table>
+          <thead>
+            <tr><th>Time</th><th>Type</th><th>Status</th><th>Confidence</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2025-06-29 14:00</td><td>Phishing</td><td>Blocked</td><td>92%</td></tr>
+            <tr><td>2025-06-29 14:02</td><td>Data Breach</td><td>Escalated</td><td>87%</td></tr>
+            <tr><td>2025-06-29 14:04</td><td>Unauthorized Access</td><td>Detected</td><td>80%</td></tr>
+            <tr><td>2025-06-29 14:06</td><td>Fake Login</td><td>Blocked</td><td>85%</td></tr>
+            <tr><td>2025-06-29 14:08</td><td>Phishing</td><td>Escalated</td><td>88%</td></tr>
+            <tr><td>2025-06-29 14:10</td><td>Blockchain Tampering</td><td>Detected</td><td>76%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cyber-stats" class="animate__animated animate__fadeIn">
+  <div class="container">
+    <h2>📈 Cyber Attack Statistics</h2>
+    <canvas id="cyberAttackChart" width="600" height="300"></canvas>
+  </div>
+</section>
+
+<section id="info-row" class="animate__animated animate__fadeIn">
+  <div class="container" style="display: flex; justify-content: space-between; gap: 2em; flex-wrap: wrap; text-align: left;">
+    <div class="contact-form" style="flex: 1;">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="about-box" style="flex: 1; text-align: right;">
+      <h2>About Us</h2>
+      <p>
+        Team Obscura Ops from KMEA Engineering College is building NeuroSentinal X — a next-generation global AI + blockchain-powered Digital Immune System. Our mission is to fight fraud collaboratively and intelligently with real-time anomaly detection and secure data sharing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+    const attackCtx = document.getElementById('cyberAttackChart').getContext('2d');
+    new Chart(attackCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'Phishing',
+            data: [12, 19, 14, 20, 18, 22],
+            borderColor: '#FF6384',
+            backgroundColor: 'rgba(255,99,132,0.1)',
+            fill: true,
+          },
+          {
+            label: 'Ransomware',
+            data: [5, 7, 6, 9, 8, 10],
+            borderColor: '#36A2EB',
+            backgroundColor: 'rgba(54,162,235,0.1)',
+            fill: true,
+          },
+          {
+            label: 'Data Breaches',
+            data: [4, 6, 5, 8, 7, 9],
+            borderColor: '#FFCE56',
+            backgroundColor: 'rgba(255,206,86,0.1)',
+            fill: true,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: '#f0f2f6' } }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#f0f2f6' },
+            grid: { color: '#333' }
+          },
+          x: {
+            ticks: { color: '#f0f2f6' },
+            grid: { color: '#333' }
+          }
+        }
+      }
+    });
+  </script>
+<div id="particles-js"></div>
+<script>
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 800 } },
+      color: { value: '#12F7D6' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.2 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#12F7D6',
+        opacity: 0.15,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: 'none',
+        out_mode: 'out'
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'repulse' },
+        onclick: { enable: true, mode: 'push' }
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+
